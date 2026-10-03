@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+
+/* Page Background */
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #91c9e8, #85249a);
+}
+
+/* White Signup Card */
+form {
+    width: 50%;
+    max-width: 630px;
+    padding: 30px 35px;
+    box-sizing: border-box;
+    background: white;
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    /* font-size: 32px; */
+        font-size: 50px;
+        margin-bottom: 35px;
+    
+    color: #29234f;
+    margin: 0 0 30px;
+}
+
+/* Fields */
+.field {
+    display: grid;
+    grid-template-columns: 170px minmax(0, 1fr);
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 14px;
+}
+
+.field > label {
+    margin: 0;
+    color: #33334d;
+    font-size: 15px;
+}
+
+.field > input:not([type="radio"]) {
+    width: 100%;
+    max-width: 330px;
+    height: 40px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    border: 1px solid #d6d8e8;
+    border-radius: 8px;
+    background: #f8f9ff;
+    outline: none;
+}
+
+.field > input:focus {
+    border-color: #7952d9;
+    box-shadow: 0 0 0 3px rgba(121, 82, 217, 0.12);
+}
+
+/* Gender */
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.gender label {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+}
+
+/* Terms and Button */
+.button {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.button input[type="checkbox"] {
+    accent-color: #7952d9;
+}
+
+.button button {
+    display: block;
+    width: 100%;
+    height: 52px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #82cce9, #85008f);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button button:hover {
+    opacity: 0.9;
+}
+
+.button p {
+    margin-top: 15px;
+    color: #44445a;
+}
+
+.button a {
+    color: #7952d9;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 600px) {
+    body {
+        align-items: flex-start;
+        padding: 15px 10px;
+    }
+
+    form {
+        padding: 25px 20px;
+    }
+
+    .field {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .field > input:not([type="radio"]) {
+        max-width: 100%;
+    }
+
+    .gender {
+        margin-bottom: 8px;
+    }
+}
+
+.button {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.button label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #33334d;
+    cursor: pointer;
+}
+
+.button input[type="checkbox"] {
+    accent-color: #7952d9;
+}
+
+.button button {
+    display: block;
+    width: 100%;
+    height: 45px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 9px;
+    background: linear-gradient(90deg, #82cce9, #85008f);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.button a {
+    color: #7952d9;
+    text-decoration: none;
+    font-weight: bold;
+}
+    </style>
+</head>
+<body>
+  <form action="">
+    <h1 align="center">SignUp</h1>
+   <div class="basic">
+    <div class="field">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+    </div>
+
+    <div class="field">
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+    </div>
+
+    <div class="field">
+        <label>Gender:</label>
+        <div class="gender">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+    </div>
+
+    <div class="field">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+    </div>
+
+    <div class="field">
+        <label for="mobile">Mobile No.:</label>
+        <input type="tel" id="mobile" name="mobile">
+    </div>
+</div>
+
+<div class="email">
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+
+    <div class="field">
+        <label for="confirmEmail">Confirm Email:</label>
+        <input type="email" id="confirmEmail" name="confirmEmail">
+    </div>
+</div>
+
+<div class="password">
+    <div class="field">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+
+    <div class="field">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+    </div>
+    
+<div class="button">
+
+    <label>
+        <input type="checkbox" name="terms" required>
+        Terms and Conditions
+    </label>
+
+    <button type="submit">SignUp</button>
+
+    <p>Already a Member? <a href="index.html">Log In</a></p>
+
+</div>
+</div>
+</form>
+</body>
+</html>
